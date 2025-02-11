@@ -38,13 +38,25 @@ add_executable(${PROJECT_NAME}
     main.c
 )
 
+# Adiciona os arquivos de fonte da pasta src
+add_subdirectory(src)
+
 #Cria os arquivos: map, bin, hex e uf2
 pico_add_extra_outputs(${PROJECT_NAME})
 
 target_link_libraries(${PROJECT_NAME}
     pico_stdlib
+    hardware_pio
+    hardware_adc
+    hardware_clocks
+    hardware_gpio
+    hardware_pwm
 )
 
+#Indica o diretório de cabeçalhos
+target_include_directories(${PROJECT_NAME} PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
+)
 
 # Ligando o usb, desligando uart
 pico_enable_stdio_usb(${PROJECT_NAME} 1)
