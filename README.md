@@ -26,4 +26,4 @@ Ao executar o programa, o servomotor será ajustado das seguintes formas:
 * Depois, será ajustada a posição do servomotor em aproximadamente 0º, por 5 segundos (largura de pulso 500 microssegundos)
 * Por fim, o servomotor fará um movimento de 180º em sentido horário e depois retornará à posição de 0º (com ajuste de 5microssegundos de largura de pulso).
 
-* Obs.: documentei todo o código com doxygen, então ao passar o cursos do mouse em cima de qualquer uma das funções, será mostrada uma pequena descrição da implementação.
+* Obs.: documentei todo o código com doxygen, então ao passar o cursor do mouse em cima de qualquer uma das funções, será mostrada uma pequena descrição da implementação.
