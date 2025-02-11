@@ -24,3 +24,17 @@ void SetServoPulseWidth(uint pin, uint16_t pulseWidth, uint16_t delayMs) {
     pwm_set_gpio_level(pin, pulseWidth);
     sleep_ms(delayMs);
 }
+
+void MoveServoPeriodically(uint pin, uint16_t minPulse, uint16_t maxPulse, uint16_t step, uint16_t delayMs) {
+    // Movimento progressivo de 0° a 180°
+    for (uint16_t pulsewidth = minPulse; pulsewidth <= maxPulse; pulsewidth += step) {
+        pwm_set_gpio_level(pin, pulsewidth);
+        sleep_ms(delayMs);
+    }
+
+    // Movimento progressivo de 180° a 0°
+    for (uint16_t pulsewidth = maxPulse; pulsewidth >= minPulse; pulsewidth -= step) {
+        pwm_set_gpio_level(pin, pulsewidth);
+        sleep_ms(delayMs);
+    }
+}

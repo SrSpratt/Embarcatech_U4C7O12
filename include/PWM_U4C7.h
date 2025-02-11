@@ -10,5 +10,6 @@
 void InitPWM(uint, uint*);
 void ConfigPWM(uint);
 void SetServoPulseWidth(uint, uint16_t, uint16_t);
+void MoveServoPeriodically(uint, uint16_t, uint16_t, uint16_t, uint16_t);
 
 #endif
