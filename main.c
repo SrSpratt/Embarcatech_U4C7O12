@@ -21,13 +21,16 @@ int main(){
     uint16_t pulseWidths[] = {2400, 1470, 500};
     size_t numPositions = sizeof(pulseWidths) / sizeof(pulseWidths[0]);
 
+    while(1){
+        
+        //ajusta a posição do servo motor nos valores do vetor: 2400, 1470 e 500
+        SetServoPulseWidth(pin, pulseWidths[0], 5000);  
+        SetServoPulseWidth(pin, pulseWidths[1], 5000);  
+        SetServoPulseWidth(pin, pulseWidths[2], 5000);  
 
-    //ajusta a posição do servo motor nos valores do vetor: 2400, 1470 e 500
-    SetServoPulseWidth(pin, pulseWidths[0], 5000);  
-    SetServoPulseWidth(pin, pulseWidths[1], 5000);  
-    SetServoPulseWidth(pin, pulseWidths[2], 5000);
-
-    MoveServoPeriodically(pin, 500, 2500, 5, 10);  
+        //ajusta a posição de 0º a 180º e de volta suavemente, com um incremento de 5 microssegundos na largura de pulso
+        MoveServoPeriodically(pin, 500, 2500, 5, 10);
+    }
 
     return 0;
 }
