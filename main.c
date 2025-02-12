@@ -30,6 +30,7 @@ int main(){
 
         //ajusta a posição de 0º a 180º e de volta suavemente, com um incremento de 5 microssegundos na largura de pulso
         MoveServoPeriodically(pin, 500, 2500, 5, 10);
+        sleep_ms(500);
     }
 
     return 0;
