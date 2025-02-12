@@ -5,10 +5,10 @@
 * Roberto Vítor Lima Gomes Rodrigues
 
 #### Vídeo de funcionamento
-No simulador wokwi:
-* 
-Na placa BitDogLab:
-* 
+Execução (no simulador e na placa) e explicação do código:
+* https://youtu.be/5vmGSrMwXG4
+ * obs.: Na placa, foi feita a execução controlando a intensidade do LED azul, como sugerido na atividade, enquanto no simulador foi feita a execução controlando as posições do servomotor.
+ * obs-I.: No vídeo é demonstrado código, execução no simulador e na placa.
 
 #### Instruções de compilação
 Certifique-se de que você tem o ambiente configurado conforme abaixo:
